@@ -7,3 +7,68 @@
     --color-headings: #1b0760;
     --color-body: #918ca4;
 }
+
+/* Typography */
+
+html {
+    font-size: 62.5%;
+    /* 62.5 * 16 = 10px */
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: var(--color-body);
+    line-height: 1.5;
+    font-size: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+    /*
+    - Our font i.e. Inter by default has some space on top and bottom of our text.
+    - So, we need to reduce the bottom margin from 2rem to 1rem to match the space with the design mockup.
+    */
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+p {
+    margin-top: 0;
+    /*
+    - The top-margin of p element and bottom-margin of h3 element was collapsing to 24px.
+    - So, we set the margin-top for p element to be 0 and let the margin-down of h3 element decide the margin-top of p element.
+    */
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 1.8rem;
+    }
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+}
+/*
+- 1024px is the standard breakpoint for the desktop screens.
+*/
