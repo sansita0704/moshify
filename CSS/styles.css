@@ -72,3 +72,35 @@ p {
 /*
 - 1024px is the standard breakpoint for the desktop screens.
 */
+
+/* Links */
+
+a {
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.link-arrow::after {
+    content: "-->";
+    margin-left: 5px;
+    /* We are using px here because no matter what is the size of the font we only want a small space between the link and the arrow. */
+
+    transition: margin 0.4s;
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+/* Using this we are targeting the after element (that we inserted dynamically) in hover state. */
+
+@media screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
+    }
+}
