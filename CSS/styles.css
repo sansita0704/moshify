@@ -170,3 +170,37 @@ a {
         padding-left: 0.5rem;
     }
 }
+
+/* Icons */
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+.icon--primary {
+    fill: var(--color-primary);
+    /* fill property only applies to svg  images. */
+}
+/* Similarly, we can create different classes for different colours of icons but since we do not need them right now we should not make them. */
+
+.icon-container {
+    align-items: center;
+    background: #f3f9fa;
+    border-radius: 50%;
+    display: inline-flex;
+    /*
+    - We do not want to set the display to block because in that case the element coming next to the icon will be on new line but we do not want it.
+    - And we want it to be inline-block so that height and width properties are applicable.
+    - But we want to align itin center.
+    - So, we use inline-flex.
+    */
+
+    height: 64px;
+    justify-content: center;
+    width: 64px;
+}
+/*
+- We have used a single dash to separate these words because this is not a modifier for the icon class.
+- It is an entirely new class and we use single dash to separate different words in BEM. 
+*/
