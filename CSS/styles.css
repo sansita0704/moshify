@@ -8,6 +8,10 @@
     --color-body: #918ca4;
 }
 
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 /* Typography */
 
 html {
@@ -204,3 +208,72 @@ a {
 - We have used a single dash to separate these words because this is not a modifier for the icon class.
 - It is an entirely new class and we use single dash to separate different words in BEM. 
 */
+
+/* Buttons */
+
+.btn {
+    border-radius: 5rem;
+    border: 0;
+    cursor: pointer;
+    /* To make the cursor change to pointer when we hover on it to make them look clickable. */
+
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    /* box-sizing for button element is by default set to border-box but for anchor element we have to set it manually. */
+}
+
+.btn--heading {
+    background: var(--color-headings);
+    color: white;
+}
+
+.btn--heading:hover {
+    background: #502cd4;
+}
+
+.btn--secondary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.btn--secondary:hover {
+    background: #00c8eb;
+}
+
+.btn--accent {
+    background: var(--color-accent);
+    color: white;
+}
+
+.btn--accent:hover {
+    background: #ec3000;
+}
+
+.btn--block {
+    width: 100%;
+    display: inline-block;
+    /* For anchor elements, we have to set it to inline-block because they are inline elements and width property does not apply to them. */
+}
+
+.btn--outline {
+    background: none;
+    border: 2px solid var(--color-headings);
+    color: var(--color-headings);
+}
+
+.btn--outline:hover {
+    background: var(--color-headings);
+    color: white;
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        font-size: 1.5rem;
+    }
+}
