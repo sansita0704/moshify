@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="CSS/normalize.css" />
@@ -43,6 +43,35 @@
         - This approach can be messy as we can have so many layout issues and solving them can take much longer time.
         -->
 
-        
+        <div style="width: 50%; margin: 4rem">
+            <div class="plan">
+                <div class="card card--secondary">
+                    <header class="card__header">
+                        <h3 class="plan__name">Entry</h3>
+                        <span class="plan__price">$14</span>
+                        <span class="plan__billing-cycle">/month</span>
+                        <span class="badge badge--secondary badge--small"
+                            >10% Off</span
+                        >
+                        <span class="plan__description"
+                            >Easy start on the cloud</span
+                        >
+                    </header>
+                    <div class="card__body">
+                        <ul class="list list--tick">
+                            <li class="list__item">Unlimited Websites</li>
+                            <li class="list__item">Unlimited Bandwidth</li>
+                            <li class="list__item">100 GB SSD Storage</li>
+                            <li class="list__item">3 GB RAM</li>
+                        </ul>
+                        <input
+                            type="button"
+                            class="btn btn--outline btn--block"
+                            value="Buy Now"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div> 
     </body>
 </html>
