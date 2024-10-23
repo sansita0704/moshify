@@ -44,9 +44,15 @@
         -->
 
         <div style="width: 50%; margin: 4rem">
-            <div class="plan">
+            <div class="plan plan--popular">
                 <div class="card card--secondary">
                     <header class="card__header">
+                        <!-- <img src="Images/popular.svg" alt="Popular Banner" /> -->
+                        <!--
+                        - We do not want to everytime insert this image element to make a plan popular.
+                        - So, we will add this element dynamically before the content of the header of the plan and then make it a separate class.
+                        - It will be a variation of the plan component having a different skin.
+                        -->
                         <h3 class="plan__name">Entry</h3>
                         <span class="plan__price">$14</span>
                         <span class="plan__billing-cycle">/month</span>
@@ -72,6 +78,6 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </body>
 </html>

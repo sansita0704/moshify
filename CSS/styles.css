@@ -385,6 +385,19 @@ a {
     margin-top: 2.5rem;
 }
 
+.plan--popular .card__header {
+    position: relative;
+}
+
+.plan--popular .card__header::before{
+    content: url(../Images/popular.svg);
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    right: 5%;
+    top: -6px;
+}
+
 @media screen and (min-width: 1024px) {
     .plan__name {
         font-size: 1.4rem;
