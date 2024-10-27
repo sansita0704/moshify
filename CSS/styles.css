@@ -6,6 +6,7 @@
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-body-darker: #5c5577;
     --color-border: #ccc;
     --border-radius: 30px;
 }
@@ -389,7 +390,7 @@ a {
     position: relative;
 }
 
-.plan--popular .card__header::before{
+.plan--popular .card__header::before {
     content: url(../Images/popular.svg);
     width: 40px;
     display: inline-block;
@@ -419,7 +420,7 @@ a {
 /* Media */
 
 .media {
-    display: flex; 
+    display: flex;
 }
 
 .media__body {
@@ -434,3 +435,50 @@ a {
     margin-top: 1.5rem;
 }
 /* Here, we have only defined the basic structure of the media component and not its skin. */
+
+/* Quotes */
+
+.quote__text {
+    font-size: 3rem;
+    color: var(--color-body-darker);
+    font-style: italic;
+    line-height: 1.3;
+}
+
+.quote__text::before {
+    content: open-quote;
+}
+
+.quote__text::after {
+    content: close-quote;
+}
+
+.quote__author {
+    margin: 0;
+    font-weight: 500;
+}
+
+.quote__company {
+    color: var(--color-headings);
+    opacity: 0.4;
+    font-size: 1.7rem;
+}
+
+.quote__line {
+    position: relative;
+    bottom: 12 px;
+}
+
+@media screen and (min-width: 1024px) {
+    .quote__text {
+        font-size: 2rem;
+    }
+
+    .quote__author {
+        font-size: 2.4rem;
+    }
+
+    .quote__company {
+        font-size: 1.6rem;
+    }
+}

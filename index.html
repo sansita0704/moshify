@@ -41,22 +41,13 @@
 
         2. Top down: To build page first and then add components.
         - This approach can be messy as we can have so many layout issues and solving them can take much longer time.
+
+        • Quotes
+        - In the quotes component, we should not add an image because it is possible that somewhere in an article on the page we do not need the image of the person.
+        - So, a quote component should only contain the text, name of the person and name of the organisation.
+
+        - To create a testimonial component, we will combine the quote component with the image and put it inside the card component.
         -->
-        <div class="media">
-            <div class="media__image">
-                <svg class="icon icon--primary">
-                    <use xlink:href="Images/sprite.svg#snap"></use>
-                </svg>
-            </div>
-            <div class="media__body">
-                <h3 class="media__title">Easy Start & Managed Updates</h3>
-                <p class="media__content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Ipsam, ipsa explicabo tempora praesentium distinctio sunt
-                    quaerat sit! Ex sapiente odit alias, eaque officia incidunt.
-                    Optio minima sit sunt ad amet.
-                </p>
-            </div>
-        </div>
+
     </body>
 </html>
