@@ -415,3 +415,22 @@ a {
         font-size: 1.7rem;
     }
 }
+
+/* Media */
+
+.media {
+    display: flex; 
+}
+
+.media__body {
+    margin-left: 2rem;
+}
+
+.media__title {
+    margin-top: 0;
+}
+
+.media__image {
+    margin-top: 1.5rem;
+}
+/* Here, we have only defined the basic structure of the media component and not its skin. */
