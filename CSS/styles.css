@@ -188,11 +188,20 @@ a {
     width: 40px;
 }
 
+.icon--small {
+    width: 30px;
+    height: 30px;
+}
+
 .icon--primary {
     fill: var(--color-primary);
     /* fill property only applies to svg  images. */
 }
 /* Similarly, we can create different classes for different colours of icons but since we do not need them right now we should not make them. */
+
+.icon--white {
+    fill: white;
+}
 
 .icon-container {
     align-items: center;
@@ -214,6 +223,10 @@ a {
 - We have used a single dash to separate these words because this is not a modifier for the icon class.
 - It is an entirely new class and we use single dash to separate different words in BEM. 
 */
+
+.icon-container--accent {
+    background: var(--color-accent);
+}
 
 /* Buttons */
 
@@ -438,6 +451,10 @@ a {
 
 /* Quotes */
 
+.quote {
+    margin-bottom: 0;
+}
+
 .quote__text {
     font-size: 3rem;
     color: var(--color-body-darker);
@@ -462,11 +479,12 @@ a {
     color: var(--color-headings);
     opacity: 0.4;
     font-size: 1.7rem;
+    margin: 0;
 }
 
 .quote__line {
     position: relative;
-    bottom: 12 px;
+    bottom: 12px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -480,6 +498,10 @@ a {
 
     .quote__company {
         font-size: 1.6rem;
+    }
+
+    .quote__line {
+        bottom: 20px;
     }
 }
 
@@ -498,5 +520,44 @@ a {
 @media screen and (min-width: 1024px) {
     .grid--cols-3 {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Testimonials */
+
+.testimonial {
+    padding: 3rem;
+    /* To create some space between the content of the testimonial and its boundary. */
+}
+
+.testimonial__image {
+    position: relative;
+}
+
+.testimonial__image > img {
+    width: 100%;
+    /* To create a responsive image i.e. as the column of the grid resizes, the image gets resized automatically. */
+}
+
+.testimonial__icon {
+    position: absolute;
+    /* We have to give this class to the icon-container and not the svg element. */
+    top: 30px;
+    right: -32px;
+    /* 64px / 2 = 32px */
+}
+
+.testimonial .quote {
+    margin-left: 7rem;
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial .quote__text,
+    .testimonial .quote__author {
+        font-size: 2rem;
+    }
+
+    .testimonial .quote__company {
+        font-size: 1.5rem;
     }
 }
