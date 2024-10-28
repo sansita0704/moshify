@@ -619,3 +619,50 @@ a {
         margin-left: 2rem;
     }
 }
+
+/* Collapsibles */
+
+.collapsible__header {
+    display: flex;
+    justify-content: space-between;
+    /*
+    - We have not set any kind of width to our collapsible because we want it to be responsive and to get fit inside any container.
+    - So, the width of the collapsible will be considered by the width of the container.
+    */
+}
+
+.collapsible__heading {
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.collapsible__chevron {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
+
+.collapsible__content {
+    /* display: none; */
+    /* We will not use display property here because we can't animate it. */
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+    transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+    /* display: block; */
+
+    opacity: 1;
+    max-height: 100vh;
+    /*
+    - Here, we are using max-height property because we want to set the limit that the content can occupy max height of 100vh.
+    - But the actual height will be considered according to the content.
+    - If we would have used height property, the content would have stretched to occupy entire viewport height. 
+    */
+}
