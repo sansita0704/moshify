@@ -666,3 +666,73 @@ a {
     - If we would have used height property, the content would have stretched to occupy entire viewport height. 
     */
 }
+
+/* Blocks */
+
+.block {
+    --padding-vertical: 6rem;
+    padding: var(--padding-vertical) 2rem;
+    /* text-align: center; */
+    /*
+    - Due to this property, if we add a card inside the block element then the text will be aligned center in the card also.
+    - To prevent this, we will wrap the heading and text of the wrap inside header element and then apply this property to the header element.
+    */
+}
+
+.block__header {
+    text-align: center;
+}
+
+.block__heading {
+    margin-top: 0;
+}
+
+.block__content {
+    margin-bottom: 0;
+}
+
+.block--dark {
+    background: black;
+    color: #7b858b;
+}
+
+.block--dark .block__heading {
+    color: white;
+}
+
+.block--skewed-right {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    /*
+    - Here each pair of noumbers represent a point.
+    - 1st number represents x-offset and 2nd number represents y-offset.
+    - 0% 0% - top-left
+    - 100% 0% - top-right
+    */
+
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    /*
+    - Due to clip-path the space below the text became less than the space above heading so we have added extra padding for skewed blocks.
+    - But if in future we change vertical padding for all the blocks to 10rem then we have to remember to change the bottom padding for skewed blocks.
+    - To prevent this, we will use variables.
+    - We can define variables for an element and all its chidren.
+    */
+}
+
+.block--skewed-left {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+/*
+- In our design mockup, we have constrained the width of some blocks to 1140px no matter how wide the screens are.
+- So, we define a new class container which will be a general class for any element.
+*/
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    /* 
+    - To align the entire block into the centre.
+    - So, vertical margin = 0.
+    - And horizontal margin = auto so the space left on the sides will be distributed equally between left and right margin.
+    */
+}
