@@ -1,0 +1,28 @@
+<nav class="nav collapsible">
+    <!--
+    • This nav bar containes three elements:
+    1. Logo
+    2. Toggler
+    3. An unordered list
+    -->
+
+    <!--
+    - To make the nav bar collapsible, we give it an extra class called collapsible.
+    - And collapsible__content to the ul element.
+    - Here, ul is the content of the collapsible which is getting expanded when the user clicks on it.
+    -->
+
+    <a class="nav__brand" href="/"><img src="Images/logo.svg" alt="Logo" /></a>
+    <!-- '/' is used to represent the homepage of the website. -->
+
+    <svg class="icon icon--white nav__toggler">
+        <use xlink:href="Images/sprite.svg#menu"></use>
+    </svg>
+    <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="#">Hosting</a></li>
+        <li class="nav__item"><a href="#">VPS</a></li>
+        <li class="nav__item"><a href="#">Domain</a></li>
+        <li class="nav__item"><a href="#">Pricing</a></li>
+    </ul>
+</nav>
+<script src="js/main.js"></script>

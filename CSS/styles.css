@@ -736,3 +736,84 @@ a {
     - And horizontal margin = auto so the space left on the sides will be distributed equally between left and right margin.
     */
 }
+
+/* Navigation Bar */
+
+.nav {
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*
+    - Using space-between the first and last item in a row will move on left and right side.
+    - Then using width: 100% and flex-wrap: wrap, the list will move on the second line occupying 100% width of its container.
+    */
+
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.nav__list {
+    width: 100%;
+    /* To move the list on the second line on mobiles. */
+
+    margin: 0;
+}
+
+.nav__item {
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #222;
+}
+
+.nav__item > a {
+    color: #d2d0db;
+    /* There is no need to assign a new class to these anchor elements as there is almost no chance that we will replace these anchor with any other elements. */
+
+    transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+    color: white;
+}
+
+.nav__toggler {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s, box-shadow 0.15s;
+}
+
+.nav__toggler:hover {
+    opacity: 1;
+}
+
+.nav.collapsible--expanded .nav__toggler {
+    /* Here, we have used double class selector so this property will be applied to all those elements having nav__toggler class and are inside an element having 2 classes nav and collapsible. */
+
+    opacity: 1;
+    box-shadow: 0 0 0 3px #666;
+    border-radius: 5px;
+    /* To round the corners of the shadow. */
+}
+
+.nav__brand {
+    position: relative;
+    top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .nav__toggler {
+        display: none;
+    }
+
+    .nav__list {
+        width: auto;
+        display: flex;
+        font-size: 1.6rem;
+        max-height: 100%;
+        opacity: 1;
+    }
+
+    .nav__item {
+        border: 0;
+    }
+}

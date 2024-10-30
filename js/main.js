@@ -1,8 +1,8 @@
 const collapsibles = document.querySelectorAll(".collapsible");
 collapsibles.forEach((item) =>
-  item.addEventListener("click", function () {
-    this.classList.toggle("collapsible--expanded");
-  })
+    item.addEventListener("click", function () {
+        this.classList.toggle("collapsible--expanded");
+    })
 );
 
 // Using this piece of code, we are selecting all the items having a class of collapsible.
