@@ -7,6 +7,16 @@
             </p>
             <a class="btn btn--accent btn--stretched"> Get Started </a>
         </header>
-        <img class="hero__banner" src="Images/banner.png" alt="Banner" />
+        <picture>
+            <source
+                type="image/webp"
+                srcset="Images/banner.webp 1x, Images/banner@2x.webp 2x"
+            />
+            <source
+                type="image/png"
+                srcset="Images/banner.png 1x, Images/banner@2x.png 2x"
+            />
+            <img class="hero__banner" src="Images/banner.png" alt="Banner" />
+        </picture>
     </div>
 </section>

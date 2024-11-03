@@ -47,6 +47,23 @@
         - So, a quote component should only contain the text, name of the person and name of the organisation.
 
         - To create a testimonial component, we will combine the quote component with the image and put it inside the card component.
+
+        • Optimizing Images
+        - We are providing an image which is over 1500px wide.
+        - Our container is always constrained for 1140px and image will take half of its width i.e. 570px.
+        - And on mobile it is taking 100% of the width which not more than 500px.
+        - So, our image is always displayed for not more than 570px.
+
+        • Problems:
+        1. We are supplying a large sized-file even when it is not needed.
+        2. Browser has to do resizing of the image which we do not want.
+
+        • Solutions:
+        1. We will serve a 570px wide image.
+        2. Then, let the browser do small resizing (like 570px -> 500px)
+        3. Also for high pixel density screen (retina display) we have to supply 2x and 3x versions of image.
+            - 3x version will take 1710px and our image is of 1500px so to make it 3x, photoshop has to create some more pixels which never existed.
+            - We are only going to provide 2x version.
         -->
         
     </body>
