@@ -40,6 +40,8 @@ h3 {
     - Our font i.e. Inter by default has some space on top and bottom of our text.
     - So, we need to reduce the bottom margin from 2rem to 1rem to match the space with the design mockup.
     */
+
+    line-height: 1.1;
 }
 
 h1 {
@@ -815,5 +817,38 @@ a {
 
     .nav__item {
         border: 0;
+    }
+}
+
+/* Hero */
+
+.hero {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.hero__tagline {
+    font-size: 2rem;
+    color: #b9c3cf;
+    letter-spacing: 1px;
+    margin: 2rem 0 5rem;
+}
+
+.hero__banner {
+    width: 100%;
+    align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding-top: 1rem;
+    }
+    
+    .hero__content {
+        text-align: left;
+        align-self: center;
+    }
+
+    .hero .block__heading {
+        line-height: 1;
     }
 }
