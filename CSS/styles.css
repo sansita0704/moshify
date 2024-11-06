@@ -249,6 +249,13 @@ a {
     /* box-sizing for button element is by default set to border-box but for anchor element we have to set it manually. */
 }
 
+.btn .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
 .btn--secondary {
     background: var(--color-secondary);
     color: white;
@@ -320,12 +327,12 @@ a {
 .input-group .input {
     border: 0;
     flex-grow: 1;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 4.5rem;
 }
 /* All the input fields inside the input-group should not have a border. */
 
 .input-group .btn {
-    margin: 4px;
+    margin: 5px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -842,7 +849,7 @@ a {
     .hero {
         padding-top: 1rem;
     }
-    
+
     .hero__content {
         text-align: left;
         align-self: center;
@@ -851,4 +858,43 @@ a {
     .hero .block__heading {
         line-height: 1;
     }
+}
+
+/* Domain Block */
+
+.block-domain .input-group {
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    margin: 4rem auto;
+    max-width: 670px;
+}
+
+.block-domain__prices {
+    display: grid;
+    /* The list items in the design mockup are perfectly lined up in rows and columns so we should use grid for them. */
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    /* To give height to each list item. */
+
+    font-weight: 600;
+    font-size: 2rem;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    /* To distribute the remaining space equally among left and right margin so that the list is in center. */
+}
+
+@media screen and (min-width: 768px) {
+    .block-domain__prices {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+    /*
+    - If we use repeat(6, 1fr), then in future if we add more items then we have to remember to edit here also.
+    - Instead of using this hard-coded value, we can use auto-fit value due to which the grid will automatically create as many columns to fit in the grid items.
+    - But when using auto-grid value, we can't use a fraction value.
+    - If we use an absolute value then if the items are lesser then extra space will be left.
+    - So, we can use minmax() to provide a min and max value for the width of the columns.
+    - Using the max value of 1fr, if we have some extra space left, then it will be distributed evenly among all the columns. 
+    */
 }
