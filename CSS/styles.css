@@ -942,6 +942,11 @@ a {
 
 .feature {
     gap: 4rem 3rem;
+    margin: 8rem 0;
+}
+
+.feature:first-of-type {
+    margin-top: 6rem;
 }
 
 .feature__heading {
@@ -950,4 +955,14 @@ a {
 
 .feature__image {
     width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .feature:nth-of-type(even) .feature__content {
+        order: 2;
+    }
+    /*
+    - By default, the order of the content is 1 because we have added the content first in our markup.
+    - So, when the feature is on even position, then its content's position will ne swaped with the image's position.
+    */
 }
