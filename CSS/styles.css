@@ -95,6 +95,7 @@ a {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
+    display: inline;
 }
 
 .link-arrow::after {
@@ -468,6 +469,7 @@ a {
 
 .media {
     display: flex;
+    /* To lay items horizontally, so that the icon is on the left side and the content is on right side. */
 }
 
 .media__body {
@@ -934,4 +936,18 @@ a {
     .block-plans {
         max-width: none;
     }
+}
+
+/* Features */
+
+.feature {
+    gap: 4rem 3rem;
+}
+
+.feature__heading {
+    margin-top: 1.5rem;
+}
+
+.feature__image {
+    width: 100%;
 }
