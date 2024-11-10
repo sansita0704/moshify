@@ -19,6 +19,12 @@
 
 /* Typography */
 
+::selection {
+    background: var(--color-primary);
+    color: white;
+}
+/* Pseudo-element selector to apply the styles on the selected text. */
+
 html {
     font-size: 62.5%;
     /* 62.5 * 16 = 10px */
@@ -54,6 +60,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
+    font-weight: 500;
 }
 
 p {
@@ -160,7 +167,8 @@ a {
 .list {
     list-style: none;
     padding-left: 0;
-    color: var(--color-headings);
+    /* color: var(--color-headings); */
+    /* We shouldn't apply this style here because the purpose of this class was to remove bullet points of the list. */
 }
 
 .list--inline .list__item {
@@ -171,6 +179,8 @@ a {
 .list--tick {
     list-style-image: url(../Images/tick.svg);
     padding-left: 3rem;
+    color: var(--color-headings);
+    /* Here, we are assuming that all the list having a tick-mark as the bullet point should have a color of headings.  */
 }
 
 .list--tick .list__item {
@@ -470,10 +480,14 @@ a {
 .media {
     display: flex;
     /* To lay items horizontally, so that the icon is on the left side and the content is on right side. */
+
+    margin-bottom: 4rem;
+    /* Almost everywhere on the webpage, we have a list of media component, so we want a bottom margin for all the components. */
 }
 
 .media__body {
     margin-left: 2rem;
+    font-size: 2rem;
 }
 
 .media__title {
@@ -727,12 +741,18 @@ a {
     color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
     color: white;
 }
+/*
+- Every block has a heading so everytime, to make the heading white we have to give the heading a class of block__heading.
+- Instead of this we use elements like h1, h2, h3 here so that the heading will be white by default.
+*/
 
 .block--skewed-right {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
     /*
     - Here each pair of noumbers represent a point.
     - 1st number represents x-offset and 2nd number represents y-offset.
@@ -750,7 +770,7 @@ a {
 }
 
 .block--skewed-left {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 /*
@@ -851,10 +871,6 @@ a {
 
 /* Hero */
 
-.hero {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
-
 .hero__tagline {
     font-size: 2rem;
     color: #b9c3cf;
@@ -948,6 +964,7 @@ a {
 .feature:first-of-type {
     margin-top: 6rem;
 }
+/* To select the first feature in the section. */
 
 .feature__heading {
     margin-top: 1.5rem;
@@ -965,4 +982,39 @@ a {
     - By default, the order of the content is 1 because we have added the content first in our markup.
     - So, when the feature is on even position, then its content's position will ne swaped with the image's position.
     */
+}
+
+/* Showcase Block */
+
+.block-showcase__image {
+    width: 100%;
+}
+
+.block-showcase .media {
+    margin-top: 5rem;
+}
+
+.block-showcase .media__title {
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .block-showcase .grid {
+        grid-template-columns: 50% 50%;
+        /*
+        - Earlier, we have 1fr 1fr.
+        - So, the space is divided into 2 slices and each slice is given to each column.
+        - Here, if the image is bigger, then it was taking more space.
+        - To solve this, we use 50% 50%, so that the width of the column is determined by the width of the container and not the size of the image.
+
+        - When done with this, the second column comes over the first column.
+        - To prevent this we align the image to the right.
+        */
+    }
+
+    .block-showcase__image {
+        width: auto;
+        max-width: 700px;
+        justify-self: end;
+    }
 }
