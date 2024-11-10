@@ -668,6 +668,10 @@ a {
 
 /* Collapsibles */
 
+.collapsible {
+    margin-bottom: 5rem;
+}
+
 .collapsible__header {
     display: flex;
     justify-content: space-between;
@@ -685,6 +689,10 @@ a {
 .collapsible__chevron {
     transform: rotate(-90deg);
     transition: transform 0.3s;
+}
+
+.collapsible__chevron:hover {
+    cursor: pointer;
 }
 
 .collapsible__content {
@@ -1024,4 +1032,87 @@ a {
 
 .block-testimonial .block__header {
     margin-bottom: 4rem;
+}
+
+/* Footer */
+
+.footer {
+    background: #232323;
+    font-weight: 300;
+}
+
+.footer__heading {
+    text-transform: uppercase;
+}
+
+.footer__section {
+    padding: 2rem;
+    border-bottom: 0.5px solid gray;
+    margin: 1rem;
+}
+
+.footer .list__item {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.footer a {
+    color: #777;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer__brand {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.footer__copyright {
+    font-size: 2.1rem;
+    color: white;
+    opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__sections {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .footer__section {
+        border: 0;
+    }
+
+    .footer .collapsible__chevron {
+        display: none;
+    }
+
+    .footer .collapsible__content {
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand {
+        order: -1;
+        /*
+        - All the items have the same order i.e. 0.
+        - So, by setting the brand's order to -1, it comes before all the items.
+        */
+
+        margin-top: 2rem;
+    }
+
+    .footer__brand img {
+        width: 100%;
+    }
+
+    .footer__copyright {
+        font-size: 1.5rem;
+    }
+
+    .footer__heading {
+        font-size: 1.6rem;
+    }
 }
