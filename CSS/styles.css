@@ -598,6 +598,7 @@ a {
 }
 
 .testimonial .quote {
+    margin-top: 4rem;
     margin-left: 7rem;
 }
 
@@ -1017,4 +1018,10 @@ a {
         max-width: 700px;
         justify-self: end;
     }
+}
+
+/* Testimonial Block */
+
+.block-testimonial .block__header {
+    margin-bottom: 4rem;
 }
