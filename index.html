@@ -12,6 +12,7 @@
         />
         <link rel="stylesheet" href="CSS/normalize.css" />
         <link rel="stylesheet" href="CSS/styles.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <!--
@@ -64,6 +65,10 @@
         3. Also for high pixel density screen (retina display) we have to supply 2x and 3x versions of image.
             - 3x version will take 1710px and our image is of 1500px so to make it 3x, photoshop has to create some more pixels which never existed.
             - We are only going to provide 2x version.
+
+        • AOS Animation
+        - AOS: Animate On Scroll
+        - It is a JS library which reads the position of scroll and as the element gets visible animation is applied on the element.
         -->
 
         <header>
@@ -84,14 +89,17 @@
         </header>
         <section class="block block--dark block--skewed-left hero">
             <div class="container grid grid--cols-2 hero__grid">
-                <header class="block__header hero__content">
+                <header
+                    class="block__header hero__content"
+                    data-aos="fade-right"
+                >
                     <h1 class="block__heading">Cloud Hosting for Pros</h1>
                     <p class="hero__tagline">
                         Deploy your website in less than 60 seconds.
                     </p>
                     <a class="btn btn--accent btn--stretched"> Get Started </a>
                 </header>
-                <picture>
+                <picture data-aos="zoom-in">
                     <source
                         type="image/webp"
                         srcset="Images/banner.webp 1x, Images/banner@2x.webp 2x"
@@ -108,7 +116,7 @@
                 </picture>
             </div>
         </section>
-        <section class="block container block-domain">
+        <section class="block container block-domain" data-aos="zoom-in-up">
             <header class="block__header">
                 <h2>Starting at $9 per month</h2>
                 <p>
@@ -138,7 +146,7 @@
                 <li>.xyz $10</li>
             </ul>
         </section>
-        <section class="block block-plans">
+        <section class="block block-plans" data-aos="fade-up">
             <div class="grid grid--cols-3">
                 <div class="plan">
                     <div class="card card--secondary">
@@ -229,7 +237,7 @@
                 </p>
             </header>
             <article class="grid grid--cols-2 feature">
-                <div class="feature__content">
+                <div class="feature__content" data-aos="fade-right">
                     <div class="icon-container">
                         <svg class="icon icon--primary">
                             <use xlink:href="Images/sprite.svg#easy"></use>
@@ -245,10 +253,15 @@
                     </p>
                     <a href="#" class="link-arrow">Learn More</a>
                 </div>
-                <img class="feature__image" src="Images/easy.jpg" alt="" />
+                <img
+                    class="feature__image"
+                    data-aos="fade-left"
+                    src="Images/easy.jpg"
+                    alt=""
+                />
             </article>
             <article class="grid grid--cols-2 feature">
-                <div class="feature__content">
+                <div class="feature__content" data-aos="fade-right">
                     <div class="icon-container">
                         <svg class="icon icon--primary">
                             <use xlink:href="Images/sprite.svg#computer"></use>
@@ -262,10 +275,15 @@
                     </p>
                     <a href="#" class="link-arrow">Learn More</a>
                 </div>
-                <img class="feature__image" src="Images/fast.jpg" alt="" />
+                <img
+                    class="feature__image"
+                    data-aos="fade-left"
+                    src="Images/fast.jpg"
+                    alt=""
+                />
             </article>
             <article class="grid grid--cols-2 feature">
-                <div class="feature__content">
+                <div class="feature__content" data-aos="fade-right">
                     <div class="icon-container">
                         <svg class="icon icon--primary">
                             <use xlink:href="Images/sprite.svg#settings"></use>
@@ -279,10 +297,15 @@
                     </p>
                     <a href="#" class="link-arrow">Learn More</a>
                 </div>
-                <img class="feature__image" src="Images/wordpress.jpg" alt="" />
+                <img
+                    class="feature__image"
+                    data-aos="fade-left"
+                    src="Images/wordpress.jpg"
+                    alt=""
+                />
             </article>
             <article class="grid grid--cols-2 feature">
-                <div class="feature__content">
+                <div class="feature__content" data-aos="fade-right">
                     <div class="icon-container">
                         <svg class="icon icon--primary">
                             <use xlink:href="Images/sprite.svg#clock"></use>
@@ -296,7 +319,12 @@
                     </p>
                     <a href="#" class="link-arrow">Learn More</a>
                 </div>
-                <img class="feature__image" src="Images/support.jpg" alt="" />
+                <img
+                    class="feature__image"
+                    data-aos="fade-left"
+                    src="Images/support.jpg"
+                    alt=""
+                />
             </article>
         </section>
         <section class="block block--dark block--skewed-right block-showcase">
@@ -306,10 +334,11 @@
             <div class="container grid grid--cols-2">
                 <img
                     class="block-showcase__image"
+                    data-aos="fade-right"
                     src="Images/ipad.png"
                     alt="Image of an ipad"
                 />
-                <ul class="list">
+                <ul class="list" data-aos="zoom-in">
                     <li>
                         <div class="media">
                             <div class="media__image">
@@ -390,7 +419,7 @@
                     Unde!
                 </p>
             </header>
-            <div class="card testimonial">
+            <div class="card testimonial" data-aos="fade-up">
                 <div class="grid grid--cols-2">
                     <div class="testimonial__image">
                         <img
@@ -586,5 +615,9 @@
             </div>
         </footer>
         <script src="js/main.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
