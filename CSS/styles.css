@@ -605,10 +605,6 @@ a {
     /* 64px / 2 = 32px */
 }
 
-.testimonial .quote {
-    margin-top: 2rem 0;
-}
-
 @media screen and (min-width: 768px) {
     .testimonial__image {
         margin: 0;

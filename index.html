@@ -3,7 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Moshify</title>
+        <meta
+            name="description"
+            content="Deploy your websites in less than 60seconds."
+        />
+        <meta property="og:title" content="Moshify..." />
+        <meta property="og:description" content="Moshify..." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image " content="http://" />
+        <meta property="og:url" content="https://moshified.com" />
+        <!--
+        • SEO
+        - Title and description of the page.
+        - Description meta element.
+        - Meta elements for Open Graph (OG) Protocol.
+        - OG protocol was designed by the facebook to control and customise the content displayed when our website is shared like title, description, etc.
+        - og:image - To show the image when the page is shared.
+        - og:url - To specify the URL of the page.
+
+        - Go to https://ogp.me/ to learn more.
+        -->
+
+        <title>Moshify - Go Online for Just $9</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -69,6 +90,8 @@
         • AOS Animation
         - AOS: Animate On Scroll
         - It is a JS library which reads the position of scroll and as the element gets visible animation is applied on the element.
+        - Go to https://michalsnik.github.io/aos/ to see different types of animations.
+        - Go to https://github.com/michalsnik/aos to see the list of animations.
         -->
 
         <header>
@@ -486,7 +509,9 @@
                 <section
                     class="collapsible collapsible--expanded footer__section"
                 >
-                    <header class="collapsible__header">
+                    <div class="collapsible__header">
+                        <!-- Here, we have used div to represent header of the collapsible because it makes no sense to have a header of a footer element. -->
+                         
                         <h2 class="collapsible__heading footer__heading">
                             Products
                         </h2>
@@ -495,7 +520,7 @@
                             src="Images/chevron.svg"
                             alt="An icon for expanding content"
                         />
-                    </header>
+                    </div>
                     <div class="collapsible__content">
                         <ul class="list">
                             <li class="list__item">
@@ -517,7 +542,7 @@
                     </div>
                 </section>
                 <section class="collapsible footer__section">
-                    <header class="collapsible__header">
+                    <div class="collapsible__header">
                         <h2 class="collapsible__heading footer__heading">
                             Company
                         </h2>
@@ -526,7 +551,7 @@
                             src="Images/chevron.svg"
                             alt="An icon for expanding content"
                         />
-                    </header>
+                    </div>
                     <div class="collapsible__content">
                         <ul class="list">
                             <li class="list__item"><a href="#">About</a></li>
@@ -546,7 +571,7 @@
                     </div>
                 </section>
                 <section class="collapsible footer__section">
-                    <header class="collapsible__header">
+                    <div class="collapsible__header">
                         <h2 class="collapsible__heading footer__heading">
                             Support
                         </h2>
@@ -555,7 +580,7 @@
                             src="Images/chevron.svg"
                             alt="An icon for expanding content"
                         />
-                    </header>
+                    </div>
                     <div class="collapsible__content">
                         <ul class="list">
                             <li class="list__item"><a href="#">Contact</a></li>
@@ -576,7 +601,7 @@
                     </div>
                 </section>
                 <section class="collapsible footer__section">
-                    <header class="collapsible__header">
+                    <div class="collapsible__header">
                         <h2 class="collapsible__heading footer__heading">
                             Domains
                         </h2>
@@ -585,7 +610,7 @@
                             src="Images/chevron.svg"
                             alt="An icon for expanding content"
                         />
-                    </header>
+                    </div>
                     <div class="collapsible__content">
                         <ul class="list">
                             <li class="list__item">
@@ -606,12 +631,12 @@
                         </ul>
                     </div>
                 </section>
-                <section class="footer__brand">
-                    <img src="Images/logo.svg" alt="Logo" />
+                <div class="footer__brand">
+                    <img src="Images/logo.svg" alt="Logo" /> 
                     <p class="footer__copyright">
                         Copyright 2024 Mosh Hamedani
                     </p>
-                </section>
+                </div>
             </div>
         </footer>
         <script src="js/main.js"></script>
