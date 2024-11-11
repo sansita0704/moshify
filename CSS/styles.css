@@ -252,7 +252,7 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -339,6 +339,7 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 4.5rem;
+    width: 0;
 }
 /* All the input fields inside the input-group should not have a border. */
 
@@ -668,10 +669,6 @@ a {
 
 /* Collapsibles */
 
-.collapsible {
-    margin-bottom: 5rem;
-}
-
 .collapsible__header {
     display: flex;
     justify-content: space-between;
@@ -847,7 +844,7 @@ a {
 }
 
 .nav.collapsible--expanded .nav__toggler {
-    /* Here, we have used double class selector so this property will be applied to all those elements having nav__toggler class and are inside an element having 2 classes nav and collapsible. */
+    /* Here, we have used double class selector so this property will be applied to all those elements having nav__toggler class and are inside an element having 2 classes nav and collapsible--expanded. */
 
     opacity: 1;
     box-shadow: 0 0 0 3px #666;
@@ -868,6 +865,8 @@ a {
     .nav__list {
         width: auto;
         display: flex;
+        /* To layout items horizontally. */
+
         font-size: 1.6rem;
         max-height: 100%;
         opacity: 1;
@@ -917,10 +916,11 @@ a {
 }
 
 .block-domain__prices {
+    color: var(--color-headings);
     display: grid;
     /* The list items in the design mockup are perfectly lined up in rows and columns so we should use grid for them. */
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     /* To give height to each list item. */
 
@@ -930,6 +930,12 @@ a {
     max-width: 700px;
     margin: 0 auto;
     /* To distribute the remaining space equally among left and right margin so that the list is in center. */
+}
+
+@media screen and (min-width: 400px) {
+    .block-domain__prices {
+        grid-template-columns: repeat(3, 1fr);
+    } 
 }
 
 @media screen and (min-width: 768px) {

@@ -65,8 +65,80 @@
             - 3x version will take 1710px and our image is of 1500px so to make it 3x, photoshop has to create some more pixels which never existed.
             - We are only going to provide 2x version.
         -->
-        
-        
+        <header>
+            <nav class="nav collapsible">
+                <a class="nav__brand" href="/"
+                    ><img src="Images/logo.svg" alt="Logo"
+                /></a>
+                <svg class="icon icon--white nav__toggler">
+                    <use xlink:href="Images/sprite.svg#menu"></use>
+                </svg>
+                <ul class="list nav__list collapsible__content">
+                    <li class="nav__item"><a href="#">Hosting</a></li>
+                    <li class="nav__item"><a href="#">VPS</a></li>
+                    <li class="nav__item"><a href="#">Domain</a></li>
+                    <li class="nav__item"><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <script src="js/main.js"></script>
+        </header>
+        <section class="block block--dark block--skewed-left hero">
+            <div class="container grid grid--cols-2 hero__grid">
+                <header class="block__header hero__content">
+                    <h1 class="block__heading">Cloud Hosting for Pros</h1>
+                    <p class="hero__tagline">
+                        Deploy your website in less than 60 seconds.
+                    </p>
+                    <a class="btn btn--accent btn--stretched"> Get Started </a>
+                </header>
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="Images/banner.webp 1x, Images/banner@2x.webp 2x"
+                    />
+                    <source
+                        type="image/png"
+                        srcset="Images/banner.png 1x, Images/banner@2x.png 2x"
+                    />
+                    <img
+                        class="hero__banner"
+                        src="Images/banner.png"
+                        alt="Banner"
+                    />
+                </picture>
+            </div>
+        </section>
+        <section class="block container block-domain">
+            <header class="block__header">
+                <h2>Starting at $9 per month</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quis, ad?
+                </p>
+            </header>
+            <div class="input-group">
+                <input
+                    class="input"
+                    type="text"
+                    placeholder="Enter domain name here..."
+                />
+                <button class="btn btn--accent">
+                    <svg class="icon icon--small icon--white">
+                        <use xlink:href="Images/sprite.svg#search"></use>
+                    </svg>
+                    Search
+                </button>
+            </div>
+            <ul class="list block-domain__prices">
+                <!-- This is an element inside the component 'block-domain'. -->
+                <li><span class="badge badge--secondary">.com $9</span></li>
+                <li>.sg $10</li>
+                <li>.space $11</li>
+                <li>.info $14</li>
+                <li>.net $10</li>
+                <li>.xyz $10</li>
+            </ul>
+        </section>
         <script src="js/main.js"></script>
     </body>
 </html>
