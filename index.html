@@ -92,6 +92,33 @@
         - It is a JS library which reads the position of scroll and as the element gets visible animation is applied on the element.
         - Go to https://michalsnik.github.io/aos/ to see different types of animations.
         - Go to https://github.com/michalsnik/aos to see the list of animations.
+
+        • Building For Production
+        - Before deploying our website, we need to prepare it for production.
+        - To do this, we use Build Tool.
+
+        - Using build tool, we can:
+        - Combine CSS and JS files: to reduce the no. of https requests sent to the server by the browser.
+        - Minify CSS/JS files: We can remove extra spaces, comments and unnecessary symbols so as to deliver small-sized files to the user.
+        - Optimize images
+
+        • Build Tools
+        - Webpack
+        - Rollup
+        - Parcel (perfect for beginners)
+
+        - To use parcel, we have to download node.
+        - Go to https://nodejs.org/en to download it.
+        - Node comes with Node Package Manager (NPM) using which we can install third party libraries or third party dependencies.
+        - To use NPM, we need to initialize an NPM Package in this directory.
+        - npm init -y: We supply y option to skip the questions that npm would ask.
+        - package.json containes information about our page.
+        - parcel is a library which could be dependent on other libraries which further can be dependent on other libraries.
+        - That's why we have 100s of files in node_modules folders.
+        
+        - We do not want to include this folder as part of git repo because it will increase the size of repo and also it is unnecessary.
+        - Using package.json, we can always restore the libraries installed.
+        - To exclude this, we make a file in our root directory having no name and extension as .gitignore.
         -->
 
         <header>
@@ -100,7 +127,7 @@
                     ><img src="Images/logo.svg" alt="Logo"
                 /></a>
                 <svg class="icon icon--white nav__toggler">
-                    <use xlink:href="Images/sprite.svg#menu"></use>
+                    <use href="Images/sprite.svg#menu"></use>
                 </svg>
                 <ul class="list nav__list collapsible__content">
                     <li class="nav__item"><a href="#">Hosting</a></li>
@@ -155,7 +182,7 @@
                 />
                 <button class="btn btn--accent">
                     <svg class="icon icon--small icon--white">
-                        <use xlink:href="Images/sprite.svg#search"></use>
+                        <use href="Images/sprite.svg#search"></use>
                     </svg>
                     Search
                 </button>
@@ -263,7 +290,7 @@
                 <div class="feature__content" data-aos="fade-right">
                     <div class="icon-container">
                         <svg class="icon icon--primary">
-                            <use xlink:href="Images/sprite.svg#easy"></use>
+                            <use href="Images/sprite.svg#easy"></use>
                         </svg>
                     </div>
                     <h3 class="feature__heading">
@@ -287,7 +314,7 @@
                 <div class="feature__content" data-aos="fade-right">
                     <div class="icon-container">
                         <svg class="icon icon--primary">
-                            <use xlink:href="Images/sprite.svg#computer"></use>
+                            <use href="Images/sprite.svg#computer"></use>
                         </svg>
                     </div>
                     <h3 class="feature__heading">Simply Fast Websites</h3>
@@ -309,7 +336,7 @@
                 <div class="feature__content" data-aos="fade-right">
                     <div class="icon-container">
                         <svg class="icon icon--primary">
-                            <use xlink:href="Images/sprite.svg#settings"></use>
+                            <use href="Images/sprite.svg#settings"></use>
                         </svg>
                     </div>
                     <h3 class="feature__heading">Wordpress Made Easy</h3>
@@ -331,7 +358,7 @@
                 <div class="feature__content" data-aos="fade-right">
                     <div class="icon-container">
                         <svg class="icon icon--primary">
-                            <use xlink:href="Images/sprite.svg#clock"></use>
+                            <use href="Images/sprite.svg#clock"></use>
                         </svg>
                     </div>
                     <h3 class="feature__heading">24/7 Expert Support</h3>
@@ -367,7 +394,7 @@
                             <div class="media__image">
                                 <svg class="icon icon--primary">
                                     <use
-                                        xlink:href="Images/sprite.svg#snap"
+                                        href="Images/sprite.svg#snap"
                                     ></use>
                                 </svg>
                             </div>
@@ -390,7 +417,7 @@
                             <div class="media__image">
                                 <svg class="icon icon--primary">
                                     <use
-                                        xlink:href="Images/sprite.svg#snap"
+                                        href="Images/sprite.svg#snap"
                                     ></use>
                                 </svg>
                             </div>
@@ -413,7 +440,7 @@
                             <div class="media__image">
                                 <svg class="icon icon--primary">
                                     <use
-                                        xlink:href="Images/sprite.svg#snap"
+                                        href="Images/sprite.svg#snap"
                                     ></use>
                                 </svg>
                             </div>
@@ -454,7 +481,7 @@
                         >
                             <svg class="icon icon--white icon--small">
                                 <use
-                                    xlink:href="Images/sprite.svg#quotes"
+                                    href="Images/sprite.svg#quotes"
                                 ></use>
                             </svg>
                         </span>
@@ -471,7 +498,7 @@
                                 <div class="media__image">
                                     <svg class="icon icon--primary quote__line">
                                         <use
-                                            xlink:href="Images/sprite.svg#line"
+                                            href="Images/sprite.svg#line"
                                         ></use>
                                     </svg>
                                 </div>
@@ -511,7 +538,7 @@
                 >
                     <div class="collapsible__header">
                         <!-- Here, we have used div to represent header of the collapsible because it makes no sense to have a header of a footer element. -->
-                         
+
                         <h2 class="collapsible__heading footer__heading">
                             Products
                         </h2>
@@ -632,9 +659,9 @@
                     </div>
                 </section>
                 <div class="footer__brand">
-                    <img src="Images/logo.svg" alt="Logo" /> 
+                    <img src="Images/logo.svg" alt="Logo" />
                     <p class="footer__copyright">
-                        Copyright 2024 Mosh Hamedani
+                        Copyright &copy; 2024 Mosh Hamedani
                     </p>
                 </div>
             </div>

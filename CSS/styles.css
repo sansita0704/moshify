@@ -273,7 +273,8 @@ a {
 }
 
 .btn--secondary:hover {
-    background: #00c8eb;
+    background: #65e1f7;
+    color: var(--color-headings);
 }
 
 .btn--accent {
