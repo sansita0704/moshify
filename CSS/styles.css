@@ -256,6 +256,7 @@ a {
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
+    /* To prevent the wrapping of the text in case of limited space. */
 
     /* box-sizing for button element is by default set to border-box but for anchor element we have to set it manually. */
 }

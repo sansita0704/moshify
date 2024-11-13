@@ -119,6 +119,8 @@
         - We do not want to include this folder as part of git repo because it will increase the size of repo and also it is unnecessary.
         - Using package.json, we can always restore the libraries installed.
         - To exclude this, we make a file in our root directory having no name and extension as .gitignore.
+
+        - Go to https://pagespeed.web.dev/ to measure the site's performance.
         -->
 
         <header>
@@ -176,10 +178,13 @@
             </header>
             <div class="input-group">
                 <input
+                    aria-label="Domain"
                     class="input"
                     type="text"
                     placeholder="Enter domain name here..."
                 />
+                <!-- aria-label is used to provide label which could be read by screen readers. -->
+
                 <button class="btn btn--accent">
                     <svg class="icon icon--small icon--white">
                         <use href="Images/sprite.svg#search"></use>
@@ -393,9 +398,7 @@
                         <div class="media">
                             <div class="media__image">
                                 <svg class="icon icon--primary">
-                                    <use
-                                        href="Images/sprite.svg#snap"
-                                    ></use>
+                                    <use href="Images/sprite.svg#snap"></use>
                                 </svg>
                             </div>
                             <div class="media__body">
@@ -416,9 +419,7 @@
                         <div class="media">
                             <div class="media__image">
                                 <svg class="icon icon--primary">
-                                    <use
-                                        href="Images/sprite.svg#snap"
-                                    ></use>
+                                    <use href="Images/sprite.svg#snap"></use>
                                 </svg>
                             </div>
                             <div class="media__body">
@@ -439,9 +440,7 @@
                         <div class="media">
                             <div class="media__image">
                                 <svg class="icon icon--primary">
-                                    <use
-                                        href="Images/sprite.svg#snap"
-                                    ></use>
+                                    <use href="Images/sprite.svg#snap"></use>
                                 </svg>
                             </div>
                             <div class="media__body">
@@ -480,9 +479,7 @@
                             class="icon-container icon-container--accent testimonial__icon"
                         >
                             <svg class="icon icon--white icon--small">
-                                <use
-                                    href="Images/sprite.svg#quotes"
-                                ></use>
+                                <use href="Images/sprite.svg#quotes"></use>
                             </svg>
                         </span>
                     </div>
