@@ -51,6 +51,10 @@ To run this project locally:
 3. **Open `index.html` in your browser**
     - You can also use VS Code’s Live Server or any local dev server of your choice.
 
+## ⭐ Feedback
+
+If you liked this project, feel free to ⭐ the repo and share your thoughts!
+
 ---
 
 > Made with ❤️ by [Sansita Jain](mailto:sansita7406@gmail.com)
