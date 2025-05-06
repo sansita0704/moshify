@@ -1,13 +1,13 @@
 # Moshify 🚀
 
 [![Built with HTML & CSS](https://img.shields.io/badge/Built%20with-HTML%20%26%20CSS-orange?style=for-the-badge)](#)
-[![Live Site](https://img.shields.io/badge/Live%20Site-Click%20Here-brightgreen?style=for-the-badge)](https://sansita0704-moshify.netlify.app)
+[![Live Site](https://img.shields.io/badge/Live%20Site-Click%20Here-brightgreen?style=for-the-badge)](https://sansita0704.github.io/moshify)
 
 -   A modern and elegant **cloud hosting landing page** built with clean HTML and CSS.
 -   This project is a front-end implementation based on [Mosh Hamedani’s tutorial](https://codewithmosh.com/p/the-ultimate-html-css-part3).
 -   The design is responsive, user-friendly, and visually appealing - perfect for showcasing cloud-based services.
 
-> ⚡ **Live Site**: [sansita0704-moshify.netlify.app](https://sansita0704-moshify.netlify.app)
+> ⚡ **Live Site**: [sansita0704.github.io/moshify](https://sansita0704.github.io/moshify)
 
 ## 🎥 Video Demo
 
