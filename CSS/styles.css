@@ -1094,9 +1094,28 @@ a {
     opacity: 0.3;
 }
 
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b2f35;
+    margin: 0 -10rem;
+    padding: 1rem 10rem;
+}
+
+.footer__text a {
+    color: white;
+}
+
+.footer__logo {
+    color: white;
+    font-size: 3rem;
+}
+
 @media screen and (min-width: 768px) {
     .footer {
         padding: 10rem;
+        padding-bottom: 0;
     }
 
     .footer__sections {
